@@ -1,0 +1,135 @@
+<!-- Project using html and css -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <!-- CSS  file link -->
+    <link rel="stylesheet" href="./CSS files/style.css">
+
+    <!-- Fontawesome link -->
+    <script src="https://kit.fontawesome.com/e3e211d8b5.js" crossorigin="anonymous"></script>
+
+    <!-- Google Font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+    <title>Contact Us Form</title>
+    
+
+</head>
+<body>
+    <header>
+        <nav>
+            
+        <!-- LOGO -->
+        <div class="logo"><img src="./Assests/hire/—Pngtree—letter a logo png design_6742199.png" alt="" height="50px
+             "></div>
+        <!-- Navigation -->
+        
+
+        <div class="contact">
+            Address: Bhopal, India 
+            <br>
+            Phone: 8224862565
+            <br>
+            Email: garyanmishra452@gmail.com 
+        </div>
+        
+    
+        <!-- searc box -->
+
+       
+            
+             
+        </div>
+        </nav>
+
+    
+
+    </header>
+    
+    <!-- hero Section -->
+    <section class="hero-section">
+        <!-- Left Div Context -->
+        <div class="left-div">
+            <h1>Hello, I am a <span><b>Web Developer</b> </span>.</h1>
+            <!-- form -->
+
+            <form  onsubmit="sendEmail(); reset(); return false;"  class="form">
+                Name: <br><input type="text" id="name" placeholder="Enter Your Name" required >
+                <br><br>
+                Occupation: <br> <input type="text" id="position" placeholder="Your Position in Company">
+                <br><br>
+                Company Name: <br> <input type="text" id="company"
+                placeholder="Your Company Name" name="myCompany"> <br> <br>
+                <label for="">Gender:</label> <br>
+                <input type="radio" name="gender" id="male">
+                Male 
+                <input type="radio" name="gender" id="feamle">
+                Female
+                <br> <br>
+                Contact Number: <br> <input type="number" placeholder="Enter Valid  Number" name="numb"  id="phone">
+                <br> <br>
+                Email Id: <br> <input type="email"  
+                placeholder="Enter Your Valid Email" name="email" id="email">
+
+                <br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function sendEmail(){
+                Email.send({
+                    Host : "smtp.gmail.com",
+                    Username : "adarshsingh00man@gmail.com",
+                    Password : "8085857224",
+                    To : 'garyanmishra452@gmail.com',
+                    From : document.getElementById("email").value,
+                    Subject : "New Contact Form Enquiry",
+                    Body : "Name: " + document.getElementById("name").value + "<br> Email: "+ document.getElementById("email").value
+                    + "<br> Phone: "+ document.getElementById("phone").value
+                    + "<br> Occupation: "+ document.getElementById("position").value
+                    + "<br> Compant Name: "+ document.getElementById("company").value
+                }).then(
+                  message => alert("Message Sent Succesfully")
+                );
+            }
+        </script>
+
+        <!-- Right Div Context -->
+        <div class="right-div">
+            <button ><img src="./Assests/hire/Picsart_23-03-22_23-41-40-276.png" alt="image"></button>
+            <!--  chat button -->
+            <div class="chat">
+                <a href="https://www.linkedin.com/in/aryan-mishra-ba0560229/"><button class="right-div-btns"> Chat with Me</button></a>
+            </div>
+        </div>
+
+
+    </section>
+
+    
+   
+
+    <footer>
+        <!--  footer text -->
+        <p>Copyright © 2022 LOGO. All rights reserverd.</p>
+
+        <ul>
+            <li> <a href=""><i class="fa-brands fa-github"></i></a> </li>
+            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/aryan-mishra-ba0560229/"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+
+    </footer>
+</body>
+</html>

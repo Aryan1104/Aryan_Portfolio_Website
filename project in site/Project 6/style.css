@@ -1,0 +1,107 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* nav bar */
+nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul
+{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+    text-decoration: none;
+    list-style: none;
+    
+}
+a
+{
+    text-decoration: none;
+    color: #000;
+}
+
+
+/* main */
+
+main{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    
+
+}
+.lmain
+{
+    /* width: 800px;
+    height: 800px; */
+    align-items: start;
+    background-image: url(./images/stethoscope.png);
+            background-attachment: fixed;
+           
+            padding: 300px 20px 0px 20px ;
+}
+
+.rmain
+{
+    display: flex;
+    align-items: start;
+    justify-content: left;
+}
+
+.yellow
+{
+    
+       top:2;
+    z-index:-2;
+}
+
+.green
+{
+    
+    
+    
+    top: 2;
+    z-index:-1;
+}
+
+.doc-img
+{
+    
+
+
+    top: 1;
+    z-index:2;
+}
+
+
+button
+{
+    background-color: rgb(32, 188, 126);
+
+    padding: 5px;
+    border-radius: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+button:hover
+{
+    color: #000;
+    background-color: rgb(255, 184, 122);
+    font-family:  'Roboto', sans-serif;
+
+
+}
+.low{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
